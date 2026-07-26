@@ -6,26 +6,24 @@
     <title>Shilpa Vellore Krishnamurthy — HRIS Specialist &amp; HR Data Analyst</title>
     
     <style>
-        /* ==========================================================================
-           1. PREMIUM RECRUITER PALETTE & RESET (CSS DESIGN RULES)
-           ========================================================================== */
+        /* ==========================================
+           PREMIUM SLATE-BLUE DASHBOARD PALETTE
+           ========================================== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
             background-color: #f8fafc; /* Minimalist Slate-Tinted Canvas */
-            color: #0f172a; /* Deep Charcoal Navy text */
+            color: #0f172a; /* Deep Charcoal Navy Text */
             line-height: 1.6;
             padding: 0 1.5rem;
-            overflow-x: hidden;
         }
 
-        /* Fixed Navigation System */
+        /* Fixed Navigation Menu */
         nav {
             display: flex;
             justify-content: space-between;
@@ -35,17 +33,15 @@
             padding: 1.75rem 0;
             position: sticky;
             top: 0;
-            background: rgba(248, 250, 252, 0.95);
-            backdrop-filter: blur(12px);
+            background: #f8fafc;
             z-index: 100;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
         }
 
         nav strong {
             font-size: 1.2rem;
             font-weight: 800;
-            letter-spacing: -0.03em;
-            color: #1e3a8a; /* Deep Corporate Indigo */
+            color: #1e3a8a; /* Corporate Indigo */
         }
 
         .nav-links a {
@@ -54,21 +50,19 @@
             font-size: 0.95rem;
             margin-left: 1.75rem;
             font-weight: 600;
-            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
             color: #2563eb; /* Analytics Electric Blue */
         }
 
-        /* Main Workspace Container Layout */
+        /* Layout Grid Spaces */
         main {
             max-width: 1000px;
             margin: 0 auto;
             padding-bottom: 6rem;
         }
 
-        /* Hero Framework */
         .hero {
             padding: 5rem 0 3rem 0;
             max-width: 850px;
@@ -84,7 +78,7 @@
         }
 
         h1 {
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             font-weight: 800;
             letter-spacing: -0.04em;
             line-height: 1.1;
@@ -93,7 +87,7 @@
         }
 
         .bio {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             color: #334155;
             line-height: 1.6;
             margin-bottom: 2.5rem;
@@ -113,16 +107,13 @@
             font-size: 0.9rem;
             font-weight: 600;
             color: #334155;
-            border: 1px solid rgba(148, 163, 184, 0.2);
         }
 
         .hero-buttons {
             display: flex;
             gap: 1rem;
-            margin-bottom: 2rem;
         }
 
-        /* Action Buttons */
         .btn {
             display: inline-block;
             text-decoration: none;
@@ -130,17 +121,15 @@
             border-radius: 8px;
             font-size: 0.95rem;
             font-weight: 700;
-            transition: all 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .btn.primary {
             background-color: #0f172a;
             color: #ffffff;
-            box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1);
         }
 
         .btn.primary:hover {
-            background-color: #1e293b;
             transform: translateY(-2px);
         }
 
@@ -150,12 +139,7 @@
             border: 1px solid #cbd5e1;
         }
 
-        .btn.secondary:hover {
-            background-color: #f8fafc;
-            transform: translateY(-2px);
-        }
-
-        /* Dashboard Metric Cards Layout */
+        /* Scorecards Components */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -164,8 +148,7 @@
             background: #ffffff;
             padding: 2.5rem;
             border-radius: 16px;
-            border: 1px solid rgba(148, 163, 184, 0.15);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+            border: 1px solid rgba(148, 163, 184, 0.2);
         }
 
         .stat-card {
@@ -176,8 +159,6 @@
             font-size: 3.5rem;
             font-weight: 800;
             color: #1e3a8a;
-            letter-spacing: -0.04em;
-            line-height: 1;
             margin-bottom: 0.5rem;
         }
 
@@ -186,41 +167,30 @@
             color: #64748b;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
         }
 
-        /* Section Layout Headers */
+        /* Core Section Typography */
         section {
             padding: 5rem 0 2rem 0;
-            border-top: 1px solid rgba(148, 163, 184, 0.15);
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
         }
 
         .section-title {
             font-size: 2.2rem;
             font-weight: 800;
-            letter-spacing: -0.03em;
             margin-bottom: 3rem;
             color: #1e293b;
         }
 
-        /* Executive Biography Layout Split */
         .about-split {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 4rem;
         }
 
-        @media (max-width: 768px) {
-            .about-split { grid-template-columns: 1fr; gap: 2rem; }
-            h1 { font-size: 2.6rem; }
-            .hero { padding: 3rem 0 1rem 0; }
-        }
-
         .about-quote {
             font-size: 1.4rem;
             font-weight: 700;
-            line-height: 1.5;
-            letter-spacing: -0.02em;
             color: #1e3a8a;
             border-left: 4px solid #2563eb;
             padding-left: 1.5rem;
@@ -232,7 +202,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Toolkit Analytics Grid Columns */
+        /* Multi-Column Toolkit Grid Layout */
         .toolkit-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -243,20 +213,18 @@
             background: #ffffff;
             padding: 2rem;
             border-radius: 12px;
-            border: 1px solid rgba(148, 163, 184, 0.15);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            transition: transform 0.2s ease;
         }
 
         .toolkit-column:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.04);
         }
 
         .toolkit-column h3 {
             font-size: 0.9rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
             color: #2563eb;
             margin-bottom: 1.25rem;
             border-bottom: 2px solid #f1f5f9;
@@ -274,20 +242,18 @@
             font-weight: 500;
         }
 
-        /* Project Display Cards */
+        /* Hover Cards for Project Portfolios */
         .project-card {
             background: #ffffff;
-            border: 1px solid rgba(148, 163, 184, 0.15);
+            border: 1px solid rgba(148, 163, 184, 0.2);
             padding: 2.5rem;
             border-radius: 14px;
             margin-bottom: 2.5rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            max-width: 900px;
+            transition: transform 0.2s ease;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.04);
         }
 
         .project-tech {
@@ -305,13 +271,11 @@
             padding: 0.3rem 0.65rem;
             border-radius: 4px;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
         }
 
         .project-card h3 {
             font-size: 1.6rem;
             font-weight: 800;
-            letter-spacing: -0.02em;
             margin-bottom: 0.5rem;
             color: #1e293b;
         }
@@ -335,23 +299,11 @@
             color: #475569;
         }
 
-        .project-card ul li {
-            margin-bottom: 0.5rem;
-        }
-
         .project-links a {
             text-decoration: none;
             color: #2563eb;
             font-weight: 700;
             font-size: 0.95rem;
-            margin-right: 1.5rem;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 2px;
-            transition: all 0.2s ease;
-        }
-
-        .project-links a:hover {
-            border-color: #2563eb;
         }
 
         /* Career Experience Timeline Elements */
@@ -360,14 +312,70 @@
             grid-template-columns: 1fr 3fr;
             gap: 3rem;
             margin-bottom: 3.5rem;
-            max-width: 900px;
         }
 
         .timeline-date {
             font-size: 1rem;
             font-weight: 700;
             color: #64748b;
-            padding-top: 2px;
         }
 
         .timeline-content h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-company {
+            font-size: 1rem;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            font-size: 1.05rem;
+            color: #475569;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <strong>Shilpa VK</strong>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#toolkit">Toolkit</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" style="border:none;">
+            <div class="hero-tag">HRIS Specialist &amp; HR Data Analyst · Berlin</div>
+            <h1>Shilpa<br>Vellore Krishnamurthy</h1>
+            <p class="bio">
+                I spent years managing global HRIS structures, data mappings, and backend human capital technical migrations. Now, I fuse that deep domain expertise with advanced engineering toolkits to construct the reliable, automated analytics architecture enterprise teams actually need.
+            </p>
+            <div class="meta-tags">
+                <span>📍 Based in Berlin, Germany</span>
+                <span>🟢 Available Immediately</span>
