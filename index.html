@@ -3,72 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shilpa VK | Workday HCM Consultant & HR Data Analyst</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Shilpa Vellore Krishnamurthy | HR Data Analyst &amp; HRIS Specialist</title>
+    
+    <style>
+        /* Modern System Reset & Premium Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 0 1.5rem;
+        }
+
+        /* Clean Top Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+        }
+
+        nav strong {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555555;
+            font-size: 0.95rem;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        /* Main Container */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 6rem;
+        }
+
+        /* Profile Executive Introduction */
+        .hero {
+            padding: 4rem 0 2rem 0;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.45rem;
+            color: #0066cc;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.5rem;
+        }
+
+        .meta-info {
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .meta-info span {
+            background: #eef2f7;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .bio {
+            font-size: 1.15rem;
+            color: #444444;
+            max-width: 800px;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        /* Action Target Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.65rem 1.3rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn.primary {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .btn.primary:hover {
+            background-color: #333333;
+        }
+
+        .btn.secondary {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn.secondary:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Structural Page Sections */
+        section {
+            margin-top: 4rem;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 3rem;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+        }
+
+        /* Grid Toolkit Categories */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.01);
+        }
+
+        .skill-card h3 {
+            font-size: 0.9rem;
+            color: #0066cc;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .skill-card p {
+            font-size: 0.95rem;
+            color: #222222;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* Portfolio Project Matrix cards */
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 2.2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.01);
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: #f1f3f5;
+            color: #495057;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .tag.highlight {
+            background: #eef5fc;
+            color: #0066cc;
+        }
+
+        .project-card h3 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-company {
+            font-size: 0.95rem;
+            color: #666666;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: #444444;
+            font-size: 1.05rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-card ul {
+            margin-bottom: 1.25rem;
+            padding-left: 1.2rem;
+            color: #555555;
+            font-size: 0.98rem;
+        }
+
+        .project-card ul li {
+            margin-bottom: 0.4rem;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Details System */
+        .contact-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 1.05rem;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 2px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            color: #0066cc;
+            border-color: #0066cc;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Fixed Header Navigation -->
     <nav>
         <strong>Shilpa VK</strong>
         <div class="nav-links">
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="#skills">Toolkit</a>
+            <a href="#projects">Experience</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <!-- Main Content Container -->
+    <!-- Main Workspace Container -->
     <main>
-        <!-- Hero Section -->
-        <section id="about" class="hero">
-            <h1>Shilpa VK</h1>
-            <p class="subtitle">Workday HCM Functional Consultant &amp; HR Data Analyst</p>
+        
+        
+        <section id="about" class="hero" style="border:none; padding-top:1rem;">
+            <h1>Shilpa Vellore Krishnamurthy</h1>
+            <p class="subtitle">HR Data Analyst &amp; HRIS Specialist (Workday HCM)</p>
+            
+            <div class="meta-info">
+                <span>📍 Berlin, Germany</span>
+                <span>🟢 Available Immediately</span>
+                <span>📄 Settlement Permit Holder</span>
+            </div>
+
             <p class="bio">
-                Data Bootcamp graduate specializing in bridging human resource systems with analytical engineering. I build data-driven workforce optimizations, configure clean functional workflows, and convert raw organizational metrics into structured HR strategy frameworks.
+                Strategic HR professional bridging core workforce data modeling with enterprise HRIS tenant architecture. Backed by an MSc in Leadership &amp; HR Management and intensive upskilling in AI Data Analytics at Ironhack, I specialize in engineering automated data pipelines, configuring complex Workday workflows, and transforming raw international employee datasets into secure, business-critical analytics infrastructure.
             </p>
+            
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">Explore Technical Experience</a>
+                <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
         </section>
 
-        <!-- Technical Skill Matrix Matrix -->
-        <section id="skills" class="skills-section">
-            <h2>Core Competencies</h2>
+        <!-- Technical Skill Grid System (As per both CVs) -->
+        <section id="skills">
+            <h2>Core Toolkit &amp; Expert Capabilities</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>HR Systems &amp; Analytics</h3>
-                    <p>Workday HCM, Functional Workflows, Workforce Metrics, Employee Lifecycle Analytics</p>
+                <div class="skill-card">
+                    <h3>Workday Ecosystem</h3>
+                    <p>Core HCM, Recruitment Modules, Business Process (BP) Configuration, Inbound/Outbound EIBs, Eligibility Rules, Security Group Management.</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Data Engineering</h3>
-                    <p>Python, Advanced Data Structures, SQL, Flow Control Automation, Jupyter Notebooks</p>
+                <div class="skill-card">
+                    <h3>Data Engineering &amp; BI</h3>
+                    <p>Power BI (DAX, Power Query, Star Schema), Advanced Excel (VBA, Analytics), Python (Pandas, NumPy), SQL (SSMS), MySQL, Snowflake.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Governance &amp; Security</h3>
+                    <p>Row-Level Security (RLS), GDPR HR Compliance, Domain-Based Security Policies, SOX Audit Support, KPI Standardization Data Dictionaries.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <p>English (C1 Professional Proficiency), German (B2 Certified / C1 Work in Progress), Tamil (Native Speaker).</p>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section (Framed for HR & Logic) -->
+        <!-- Dynamic Professional Experience Mapping -->
         <section id="projects">
-            <h2>Selected Projects</h2>
+            <h2>Selected Technical Experience &amp; Projects</h2>
+            <div class="project-list">
 
-            <!-- Project 1: HR Logic & Automation -->
-            <div class="project-card">
-                <span class="tag">Python / Object-Oriented Programming</span>
-                <h3>Workforce Simulation &amp; Decision Matrix Engine</h3>
-                <p>Designed a complex Python logic engine analyzing resource state changes, programmatic constraints, and user navigation behavior. Leveraged advanced flow-control architecture to automate sequence calculations and output real-time metric updates.</p>
-                <div class="project-links">
-                    <a href="https://github.com" target="_blank">View Code Repository →</a>
-                </div>
-            </div>
-
-            <!-- Project 2: Data Architecture -->
-            <div class="project-card">
-                <span class="tag">Python / Data Structures</span>
-                <h3>HR Metric Structuring &amp; Pipeline Automation</h3>
-                <p>Engineered comprehensive programmatic modules to manipulate, isolate, and filter nested data structures. Optimized algorithmic performance across complex dictionaries and datasets to streamline core functional workflow operations.</p>
-                <div class="project-links">
-                    <a href="https://github.com/vkshilpa106-blip" target="_blank">View Bootcamp Repositories →</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-</body>
-</html>
