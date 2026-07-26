@@ -6,7 +6,9 @@
     <title>Shilpa Vellore Krishnamurthy — HRIS Specialist &amp; HR Data Analyst</title>
     
     <style>
-        /* Premium Dashboard Palette & Reset */
+        /* ==========================================================================
+           1. PREMIUM RECRUITER PALETTE & RESET (CSS DESIGN RULES)
+           ========================================================================== */
         * {
             margin: 0;
             padding: 0;
@@ -16,14 +18,14 @@
         }
 
         body {
-            background-color: #f8fafc; /* Slate Tinted Minimalist Canvas */
-            color: #0f172a; /* Deep Charcoal Navy */
+            background-color: #f8fafc; /* Minimalist Slate-Tinted Canvas */
+            color: #0f172a; /* Deep Charcoal Navy text */
             line-height: 1.6;
             padding: 0 1.5rem;
             overflow-x: hidden;
         }
 
-        /* Interactive Sticky Navbar with Blur */
+        /* Fixed Navigation System */
         nav {
             display: flex;
             justify-content: space-between;
@@ -52,23 +54,21 @@
             font-size: 0.95rem;
             margin-left: 1.75rem;
             font-weight: 600;
-            position: relative;
-            padding-bottom: 4px;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
             color: #2563eb; /* Analytics Electric Blue */
         }
 
-        /* Layout Container */
+        /* Main Workspace Container Layout */
         main {
             max-width: 1000px;
             margin: 0 auto;
             padding-bottom: 6rem;
         }
 
-        /* Hero Layout Frame */
+        /* Hero Framework */
         .hero {
             padding: 5rem 0 3rem 0;
             max-width: 850px;
@@ -122,7 +122,7 @@
             margin-bottom: 2rem;
         }
 
-        /* High-fidelity Button Interactions */
+        /* Action Buttons */
         .btn {
             display: inline-block;
             text-decoration: none;
@@ -155,7 +155,7 @@
             transform: translateY(-2px);
         }
 
-        /* Statistics Metrics Row */
+        /* Dashboard Metric Cards Layout */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -189,7 +189,7 @@
             letter-spacing: 0.08em;
         }
 
-        /* Universal Sections */
+        /* Section Layout Headers */
         section {
             padding: 5rem 0 2rem 0;
             border-top: 1px solid rgba(148, 163, 184, 0.15);
@@ -203,7 +203,7 @@
             color: #1e293b;
         }
 
-        /* Balanced Split Columns */
+        /* Executive Biography Layout Split */
         .about-split {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -232,7 +232,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Dashboard-inspired Toolkit Grid */
+        /* Toolkit Analytics Grid Columns */
         .toolkit-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -274,7 +274,7 @@
             font-weight: 500;
         }
 
-        /* Hover-Scaling Project Cards */
+        /* Project Display Cards */
         .project-card {
             background: #ffffff;
             border: 1px solid rgba(148, 163, 184, 0.15);
@@ -354,17 +354,13 @@
             border-color: #2563eb;
         }
 
-        /* Experience Timeline Elements */
+        /* Career Experience Timeline Elements */
         .timeline-item {
             display: grid;
             grid-template-columns: 1fr 3fr;
             gap: 3rem;
             margin-bottom: 3.5rem;
             max-width: 900px;
-        }
-
-        @media (max-width: 768px) {
-            .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
         }
 
         .timeline-date {
