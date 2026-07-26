@@ -1,160 +1,329 @@
-/* Executive Minimalist System Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shilpa VK | Workday HCM Consultant & HR Data Analyst</title>
+    
+    <style>
+        /* Modern Executive Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
 
-body {
-    background-color: #ffffff;
-    color: #111111;
-    line-height: 1.6;
-    padding: 0 2rem;
-}
+        body {
+            background-color: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 0 1.5rem;
+        }
 
-/* Fixed Sticky Top Navigation */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 2.5rem 0;
-    border-bottom: 1px solid #f0f0f0;
-}
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
 
-nav strong {
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
+        nav strong {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
 
-.nav-links a {
-    text-decoration: none;
-    color: #555555;
-    font-size: 0.95rem;
-    margin-left: 2rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: #666666;
+            font-size: 0.95rem;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
 
-.nav-links a:hover {
-    color: #000000;
-}
+        .nav-links a:hover {
+            color: #0066cc;
+        }
 
-/* Master Layout Layout Columns */
-main {
-    max-width: 850px;
-    margin: 0 auto;
-    padding-bottom: 6rem;
-}
+        /* Container Layout */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 6rem;
+        }
 
-.hero {
-    padding: 6rem 0 4rem 0;
-}
+        /* Hero Section (Like Jorge's Intro) */
+        .hero {
+            padding: 5rem 0 3rem 0;
+        }
 
-h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-}
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
 
-.subtitle {
-    font-size: 1.4rem;
-    color: #0066cc;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    margin-bottom: 2rem;
-}
+        .subtitle {
+            font-size: 1.5rem;
+            color: #0066cc;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.5rem;
+        }
 
-.bio {
-    font-size: 1.2rem;
-    color: #444444;
-    max-width: 700px;
-    line-height: 1.7;
-}
+        .bio {
+            font-size: 1.2rem;
+            color: #444444;
+            max-width: 750px;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
 
-/* Skill Grid Matrix Display */
-.skills-section {
-    margin-bottom: 4rem;
-    padding-top: 2rem;
-}
+        /* Call to Action Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
 
-.skills-section h2, #projects h2 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
-    color: #111111;
-}
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
+        .btn.primary {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
 
-.skill-category {
-    background: #fafafa;
-    border: 1px solid #eaeaea;
-    padding: 1.5rem;
-    border-radius: 8px;
-}
+        .btn.primary:hover {
+            background-color: #333333;
+        }
 
-.skill-category h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: #111111;
-}
+        .btn.secondary {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border: 1px solid #e0e0e0;
+        }
 
-.skill-category p {
-    font-size: 0.95rem;
-    color: #555555;
-}
+        .btn.secondary:hover {
+            background-color: #f5f5f5;
+        }
 
-/* Clean Project Cards styling */
-.project-card {
-    border-top: 1px solid #eaeaea;
-    padding: 2.5rem 0;
-}
+        /* Section Headings */
+        section {
+            margin-top: 4rem;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 3rem;
+        }
 
-.tag {
-    display: inline-block;
-    background: #eef5fc;
-    color: #0066cc;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.6rem;
-    border-radius: 4px;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
+        section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+        }
 
-.project-card h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.01em;
-}
+        /* Toolkit / Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
 
-.project-card p {
-    color: #555555;
-    font-size: 1.05rem;
-    margin-bottom: 1rem;
-    max-width: 750px;
-}
+        .skill-card {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
 
-.project-links a {
-    text-decoration: none;
-    color: #0066cc;
-    font-size: 0.95rem;
-    font-weight: 600;
-}
+        .skill-card h3 {
+            font-size: 1rem;
+            color: #666666;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
 
-.project-links a:hover {
-    text-decoration: underline;
-}
+        .skill-card p {
+            font-size: 1rem;
+            color: #1a1a1a;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        /* Project Cards Layout */
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: #eef5fc;
+            color: #0066cc;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            color: #555555;
+            font-size: 1.05rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Details Footer */
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 1rem;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 2px;
+        }
+
+        .contact-links a:hover {
+            color: #0066cc;
+            border-color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <nav>
+        <strong>Shilpa VK</strong>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Body Container -->
+    <main>
+        
+        <!-- Hero Introduction Section -->
+        <section id="about" class="hero" style="border:none; padding-top:2rem;">
+            <h1>Hi, I'm Shilpa 👋</h1>
+            <p class="subtitle">Workday HCM Consultant &amp; HR Data Analyst</p>
+            <p class="bio">
+                Ironhack Data Analytics graduate bridging core business logic with technical engineering. I specialize in turning complex workforce datasets into clear corporate decisions, designing streamlined functional workflows, and unlocking deep HR pipeline insights.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">See My Work</a>
+                <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
+        </section>
+
+        <!-- Toolkit Matrix (Like Jorge's Grid) -->
+        <section id="skills">
+            <h2>My Toolkit</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HR Systems</h3>
+                    <p>Workday HCM, Functional Workflows, HCM Architecture</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Analytics</h3>
+                    <p>Python (Pandas, NumPy), SQL, Data Wrangling</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Environments</h3>
+                    <p>Jupyter Notebooks, VS Code, Git &amp; GitHub</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Projects (Framed for HR & Logic Data Roles) -->
+        <section id="projects">
+            <h2>Selected Projects</h2>
+            <div class="project-list">
+
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="tag-container">
+                        <span class="tag">Python</span>
+                        <span class="tag">Flow Control Logic</span>
+                        <span class="tag">Jupyter</span>
+                    </div>
+                    <h3>Workforce State Simulation &amp; Optimization Engine</h3>
+                    <p>Developed an advanced procedural simulation engine utilizing object-oriented programming to monitor and compute state variations based on user rules. Structured rigorous algorithmic flows to process constraints and deliver real-time data metrics.</p>
+                    <a href="https://github.com" target="_blank">View Code Repository ↗</a>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="tag-container">
+                        <span class="tag">Python Data Structures</span>
+                        <span class="tag">Data Wrangling</span>
+                    </div>
+                    <h3>Complex Organizational Data Modeling Pipeline</h3>
+                    <p>Engineered comprehensive code structures designed to clean, manipulate, and segregate deep nested elements within list and dictionary architectures. Optimized structural query logic to prepare unstructured organizational data for active database migration.</p>
+                    <a href="https://github.com" target="_blank">View Core Repositories ↗</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Let's Work Together Section -->
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <p class="bio" style="font-size: 1.1rem; margin-bottom: 1.5rem;">
