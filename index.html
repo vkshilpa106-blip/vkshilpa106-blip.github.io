@@ -3,49 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shilpa Vellore Krishnamurthy — HRIS &amp; People Analytics</title>
+<title>Shilpa Vellore Krishnamurthy · HRIS &amp; People Analytics</title>
 <meta name="description" content="Workday HCM &amp; People Analytics specialist — Berlin. SAP-to-Workday migration, Power BI dashboards, GDPR-compliant reporting.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<canvas id="node-canvas"></canvas>
-
 <div class="grain"></div>
 
 <nav class="nav">
-  <a href="#top" class="nav__mark">SVK</a>
+  <a href="#top" class="nav__mark">Shilpa V. Krishnamurthy</a>
   <div class="nav__links">
     <a href="#about">About</a>
     <a href="#systems">Systems</a>
+    <a href="#projects">Projects</a>
     <a href="#pipeline">Experience</a>
-    <a href="#credentials">Credentials</a>
     <a href="#contact">Contact</a>
   </div>
   <a href="assets/Shilpa_VK_CV.pdf" class="nav__cta" download>Résumé ↓</a>
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero__inner">
-    <p class="eyebrow"><span class="eyebrow__dot"></span>Berlin, Germany · Settlement Permit · Available immediately</p>
-    <h1 class="hero__name">Shilpa Vellore<br>Krishnamurthy</h1>
-    <div class="hero__role">
-      <span class="hero__role-prefix">I build the systems behind</span>
-      <span class="hero__role-cycle" id="role-cycle" aria-live="polite"></span>
+  <div class="hero__grid">
+
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="eyebrow__rule"></span>HRIS SPECIALIST · BERLIN</p>
+      <h1 class="hero__name">Shilpa Vellore<br>Krishnamurthy</h1>
+      <p class="hero__summary">
+        I spent nine years running Workday and SAP systems inside real
+        HR operations <strong>— before I ever built a dashboard about them.</strong>
+        Now I turn that operational reality into people analytics
+        leadership actually trusts.
+      </p>
+      <div class="hero__actions">
+        <a href="#systems" class="btn btn--primary">View systems</a>
+        <a href="mailto:Shilpavk20@gmail.com" class="btn btn--ghost">Get in touch</a>
+        <a href="assets/Shilpa_VK_CV.pdf" class="btn btn--ghost" download>↓ Download CV</a>
+      </div>
     </div>
-    <p class="hero__summary">
-      Nine years turning messy HR data into governed, trustworthy systems —
-      Workday HCM configuration, SAP-to-Workday migrations, and the Power BI
-      dashboards that leadership actually reads.
-    </p>
-    <div class="hero__actions">
-      <a href="mailto:Shilpavk20@gmail.com" class="btn btn--primary">Say hello</a>
-      <a href="https://linkedin.com/in/shilpavmk" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn</a>
-      <a href="https://github.com/vkshilpa106-blip" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
+
+    <div class="hero__badge-wrap">
+      <div class="hero__glow"></div>
+      <svg class="hero__ring" viewBox="0 0 320 320" aria-hidden="true">
+        <circle cx="160" cy="160" r="156" class="ring ring--outer"/>
+        <circle cx="160" cy="160" r="128" class="ring ring--dashed"/>
+      </svg>
+      <svg class="hero__hub" viewBox="0 0 320 320" aria-hidden="true">
+        <g class="hub__satellite" style="--angle:0deg">
+          <line x1="160" y1="160" x2="160" y2="70" class="hub__spoke"/>
+          <circle cx="160" cy="70" r="5" class="hub__node"/>
+          <text x="160" y="52" class="hub__label">WORKDAY</text>
+        </g>
+        <g class="hub__satellite" style="--angle:90deg">
+          <line x1="160" y1="160" x2="250" y2="160" class="hub__spoke"/>
+          <circle cx="250" cy="160" r="5" class="hub__node"/>
+          <text x="272" y="164" class="hub__label">SAP</text>
+        </g>
+        <g class="hub__satellite" style="--angle:180deg">
+          <line x1="160" y1="160" x2="160" y2="250" class="hub__spoke"/>
+          <circle cx="160" cy="250" r="5" class="hub__node"/>
+          <text x="160" y="272" class="hub__label">POWER BI</text>
+        </g>
+        <g class="hub__satellite" style="--angle:270deg">
+          <line x1="160" y1="160" x2="70" y2="160" class="hub__spoke"/>
+          <circle cx="70" cy="160" r="5" class="hub__node"/>
+          <text x="48" y="164" class="hub__label">GDPR</text>
+        </g>
+      </svg>
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__num">9<span class="stat__plus">+</span></span><span class="stat__label">Years in HR systems<br>&amp; analytics</span></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num">2</span><span class="stat__label">Workday certifications</span></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num">25<span class="stat__plus">+</span></span><span class="stat__label">International hubs<br>supported</span></div>
+      </div>
     </div>
+
   </div>
   <div class="hero__scroll">
     <span>scroll</span>
@@ -57,102 +93,125 @@
 
   <section class="section" id="about">
     <div class="section__head">
-      <span class="section__tag">01 — About</span>
-      <h2>Data liaison, by trade.</h2>
+      <span class="section__tag"><span class="section__rule"></span>About</span>
+      <h2>A different kind of<br>HRIS specialist.</h2>
+      <p class="section__quote">"I know what a broken tenant looks like at 6pm before a go-live — because I've had to fix one."</p>
     </div>
+
     <div class="about__grid">
       <div class="about__photo">
         <img src="assets/profile.jpg" alt="Portrait of Shilpa Vellore Krishnamurthy" loading="lazy">
-        <div class="about__photo-frame"></div>
       </div>
       <div class="about__copy">
         <p>
-          I sit at the point where HR, IT, and leadership stop understanding
-          each other — and translate. At Expleo Germany I was the bridge
-          between a legacy SAP HCM estate and a new global Workday tenant:
-          mapping data structures, reconciling headcounts across
-          international hubs, and building the CHRO-level Power BI suite
-          that made workforce trends visible in real time.
+          My career started on the SAP side of HR — the legacy systems
+          most Workday consultants only ever hear about secondhand.
+          At Expleo Germany, that history made me the natural bridge
+          during a global SAP-to-Workday migration: I mapped legacy
+          data structures, reconciled headcounts across international
+          hubs, and stayed on after go-live to own Workday Core HCM
+          and Recruitment across the EMEA region.
         </p>
         <p>
-          Before that, at Infoplus, I built the company's first automated
-          diversity dashboard and the data-quality routines behind it — the
-          kind of unglamorous governance work that makes every report after
-          it trustworthy.
+          Before that, at Infoplus, I built the company's first
+          automated diversity dashboard and the data-quality routines
+          behind it — the unglamorous governance work that makes every
+          report after it trustworthy.
         </p>
         <p>
           I'm currently deepening my analytics toolkit — Python, SQL,
           Tableau, applied ML — through Ironhack's AI Data Analytics
-          Bootcamp in Berlin, while continuing to work hands-on in Workday
+          Bootcamp in Berlin, while still working hands-on in Workday
           sandbox tenants.
         </p>
-        <div class="about__facts">
-          <div class="fact">
-            <span class="fact__num">9</span>
-            <span class="fact__label">years in HR systems<br>&amp; analytics</span>
-          </div>
-          <div class="fact">
-            <span class="fact__num">2</span>
-            <span class="fact__label">Workday certifications<br>Core HCM · Payroll BP</span>
-          </div>
-          <div class="fact">
-            <span class="fact__num">25+</span>
-            <span class="fact__label">international hubs<br>supported at Expleo</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--dark" id="systems">
+  <section class="section section--panel" id="systems">
     <div class="section__head">
-      <span class="section__tag">02 — Systems</span>
+      <span class="section__tag"><span class="section__rule"></span>Systems</span>
       <h2>What I actually configure.</h2>
     </div>
-    <div class="systems__grid">
 
-      <div class="systems__col">
-        <h3>Workday</h3>
-        <ul class="tag-list">
-          <li>Core HCM · Worker Lifecycle</li>
-          <li>Business Process Framework</li>
-          <li>Security Groups (Constrained / Domain / Role-based)</li>
-          <li>Staffing Models &amp; Eligibility Rules</li>
-          <li>Payroll Fundamentals · EIBs</li>
-          <li>Recruitment configuration</li>
-        </ul>
+    <div class="tagcloud-group">
+      <h3>Workday</h3>
+      <div class="tagcloud">
+        <span>Core HCM</span><span>Worker Lifecycle</span><span>Business Process Framework</span>
+        <span>Security Groups</span><span>Staffing Models</span><span>Eligibility Rules</span>
+        <span>Payroll Fundamentals</span><span>EIBs</span><span>Recruitment</span>
       </div>
+    </div>
+    <div class="tagcloud-group">
+      <h3>Migration &amp; Governance</h3>
+      <div class="tagcloud">
+        <span>SAP HCM (PA/OM)</span><span>Data Mapping</span><span>Tenant Reconciliation</span>
+        <span>GDPR Reporting</span><span>DEI Metrics (DQAR)</span><span>Data Quality Assurance</span>
+        <span>UAT</span><span>Release Testing</span>
+      </div>
+    </div>
+    <div class="tagcloud-group">
+      <h3>Analytics &amp; BI</h3>
+      <div class="tagcloud">
+        <span>Power BI</span><span>Star Schema</span><span>DAX</span><span>RLS</span>
+        <span>Power Query</span><span>SQL</span><span>Tableau</span><span>KPI Design</span>
+        <span>Excel</span><span class="tagcloud__wip">Python (in progress)</span><span class="tagcloud__wip">ML fundamentals (in progress)</span>
+      </div>
+    </div>
+  </section>
 
-      <div class="systems__col">
-        <h3>Migration &amp; Governance</h3>
-        <ul class="tag-list">
-          <li>SAP HCM (PA/OM) data mapping</li>
-          <li>Tenant validation &amp; reconciliation</li>
-          <li>GDPR-compliant reporting design</li>
-          <li>DEI metric standardization (DQAR)</li>
-          <li>Data quality assurance routines</li>
-          <li>UAT &amp; release testing</li>
-        </ul>
-      </div>
+  <section class="section" id="projects">
+    <div class="section__head">
+      <span class="section__tag"><span class="section__rule"></span>Projects</span>
+      <h2>Selected work.</h2>
+      <p class="section__sub">
+        Full-cycle bootcamp and consulting work — from raw data to
+        dashboard to recommendation.
+        <em>Details on the way — check back soon, or ask me directly.</em>
+      </p>
+    </div>
 
-      <div class="systems__col">
-        <h3>Analytics &amp; BI</h3>
-        <ul class="tag-list">
-          <li>Power BI — Star Schema, DAX, RLS</li>
-          <li>Power Query · SQL</li>
-          <li>Tableau</li>
-          <li>KPI design &amp; data storytelling</li>
-          <li>Excel — advanced modelling</li>
-          <li>Python &amp; ML fundamentals <em>(in progress)</em></li>
-        </ul>
-      </div>
+    <div class="projects__grid">
+
+      <article class="project-card">
+        <div class="project-card__tags"><span>Python</span><span>SQL</span><span>Tableau</span><span>A/B Testing</span></div>
+        <h3>Vanguard — Digital Process Redesign</h3>
+        <p>Team analysis of a real Vanguard client-portal A/B test across
+           300,000+ sessions — completion rate, time-on-task, and error
+           rate, presented directly to the client.</p>
+        <div class="project-card__links">
+          <span class="project-card__pending">Repo link — coming soon</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__tags"><span>Python</span><span>D3.js</span><span>TopoJSON</span><span>EDA</span></div>
+        <h3>BlueWave Analytics — Shark Attack Risk Mapping</h3>
+        <p>Geographic risk analysis of shark attack incidents, built into
+           interactive D3/TopoJSON visualizations for a non-technical
+           stakeholder audience.</p>
+        <div class="project-card__links">
+          <span class="project-card__pending">Repo link — coming soon</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__tags"><span>Marketing Analytics</span><span>Channel Efficiency</span></div>
+        <h3>TSV Consumer Insights — Channel Strategy</h3>
+        <p>Marketing analytics pitch deck identifying the three channel
+           efficiency findings that mattered most for the client's
+           acquisition spend.</p>
+        <div class="project-card__links">
+          <span class="project-card__pending">Deck link — coming soon</span>
+        </div>
+      </article>
 
     </div>
   </section>
 
-  <section class="section" id="pipeline">
+  <section class="section section--panel" id="pipeline">
     <div class="section__head">
-      <span class="section__tag">03 — Experience</span>
+      <span class="section__tag"><span class="section__rule"></span>Experience</span>
       <h2>The pipeline so far.</h2>
       <p class="section__sub">Every role, run the way I'd document a data pipeline — source, transform, output.</p>
     </div>
@@ -160,17 +219,17 @@
     <div class="pipeline">
       <div class="pipeline__line"><div class="pipeline__line-fill" id="pipeline-fill"></div></div>
 
-      <div class="node" data-metric="0" data-suffix="">
+      <div class="node" data-metric="0">
         <div class="node__dot"></div>
         <div class="node__card">
           <span class="node__date">Aug 2025 — Aug 2026</span>
           <h3>Ironhack · AI Data Analytics Bootcamp</h3>
-          <p class="node__role">Berlin — in progress, Bildungsgutschein-funded</p>
+          <p class="node__role">Berlin — in progress</p>
           <p>Python, SQL, Tableau, applied ML, and LLM/API integration — extending a decade of BI work into full-stack data analytics.</p>
         </div>
       </div>
 
-      <div class="node" data-metric="10" data-suffix="%">
+      <div class="node" data-metric="10">
         <div class="node__dot"></div>
         <div class="node__card">
           <span class="node__date">Jan 2022 — Aug 2025</span>
@@ -181,7 +240,7 @@
         </div>
       </div>
 
-      <div class="node" data-metric="25" data-suffix="%">
+      <div class="node" data-metric="25">
         <div class="node__dot"></div>
         <div class="node__card">
           <span class="node__date">Dec 2020 — Dec 2021</span>
@@ -192,7 +251,7 @@
         </div>
       </div>
 
-      <div class="node" data-metric="40" data-suffix="%">
+      <div class="node" data-metric="40">
         <div class="node__dot"></div>
         <div class="node__card">
           <span class="node__date">Apr 2016 — Aug 2019</span>
@@ -203,7 +262,7 @@
         </div>
       </div>
 
-      <div class="node" data-metric="20" data-suffix="%">
+      <div class="node" data-metric="20">
         <div class="node__dot"></div>
         <div class="node__card">
           <span class="node__date">Jun 2010 — Mar 2016</span>
@@ -215,41 +274,20 @@
       </div>
 
     </div>
-  </section>
 
-  <section class="section section--dark" id="credentials">
-    <div class="section__head">
-      <span class="section__tag">04 — Credentials</span>
-      <h2>Certified &amp; still learning.</h2>
-    </div>
-    <div class="credentials__grid">
-      <div class="credential">
-        <span class="credential__mark">WD</span>
-        <h3>Workday HCM Core</h3>
-        <p>Certified</p>
-      </div>
-      <div class="credential">
-        <span class="credential__mark">WD</span>
-        <h3>Workday Payroll BP</h3>
-        <p>Certified</p>
-      </div>
-      <div class="credential">
-        <span class="credential__mark">MSc</span>
-        <h3>Leadership &amp; HR Management</h3>
-        <p>Gisma Business School / University of Law, Berlin</p>
-      </div>
-      <div class="credential">
-        <span class="credential__mark">AI</span>
-        <h3>Data Analytics Bootcamp</h3>
-        <p>Ironhack, Berlin — in progress</p>
-      </div>
+    <div class="credentials">
+      <div class="credential"><span class="credential__mark">WD</span><div><h4>Workday HCM Core</h4><p>Certified</p></div></div>
+      <div class="credential"><span class="credential__mark">WD</span><div><h4>Workday Payroll BP</h4><p>Certified</p></div></div>
+      <div class="credential"><span class="credential__mark">MSc</span><div><h4>Leadership &amp; HR Management</h4><p>Gisma Business School, Berlin</p></div></div>
+      <div class="credential"><span class="credential__mark">AI</span><div><h4>Data Analytics Bootcamp</h4><p>Ironhack, Berlin — in progress</p></div></div>
     </div>
   </section>
 
   <section class="section contact" id="contact">
     <div class="section__head">
-      <span class="section__tag">05 — Contact</span>
+      <span class="section__tag"><span class="section__rule"></span>Contact</span>
       <h2>Let's talk Workday.</h2>
+      <p class="section__sub">Available immediately · Settlement Permit, Germany · Open to relocate</p>
     </div>
     <div class="contact__grid">
       <a href="mailto:Shilpavk20@gmail.com" class="contact__item">
