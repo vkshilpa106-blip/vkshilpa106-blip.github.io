@@ -1,352 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shilpa Vellore Krishnamurthy — HRIS Specialist &amp; HR Data Analyst</title>
-    
-    <style>
-        /* Modern Clean Canvas & Base Palette */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f8fafc;
-            color: #0f172a;
-            line-height: 1.6;
-            padding: 0 1.5rem;
-        }
-
-        /* Fixed Navigation System Bar */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 1.75rem 0;
-            position: sticky;
-            top: 0;
-            background: #f8fafc;
-            z-index: 100;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        nav strong {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: #1e3a8a;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #475569;
-            font-size: 0.95rem;
-            margin-left: 1.75rem;
-            font-weight: 600;
-        }
-
-        /* Workspace Spacings */
-        main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding-bottom: 6rem;
-        }
-
-        /* Hero Framework */
-        .hero {
-            padding: 5rem 0 3rem 0;
-            max-width: 850px;
-        }
-
-        .hero-tag {
-            font-size: 0.95rem;
-            color: #2563eb;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: #1e293b;
-        }
-
-        .bio {
-            font-size: 1.25rem;
-            color: #334155;
-            line-height: 1.6;
-            margin-bottom: 2.5rem;
-        }
-
-        .meta-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-bottom: 3rem;
-        }
-
-        .meta-tags span {
-            background-color: #e2e8f0;
-            padding: 0.35rem 0.85rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #334155;
-        }
-
-        /* Metrics Scoreboard Row */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-            background: #ffffff;
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        .stat-card {
-            text-align: center;
-        }
-
-        .stat-card h2 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #1e3a8a;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-card p {
-            font-size: 0.85rem;
-            color: #64748b;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* Sections Typography */
-        section {
-            padding: 5rem 0 2rem 0;
-            border-top: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 3rem;
-            color: #1e293b;
-        }
-
-        .about-split {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-        }
-
-        .about-quote {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            border-left: 4px solid #2563eb;
-            padding-left: 1.5rem;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            color: #475569;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Grid Toolkit */
-        .toolkit-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-        }
-
-        .toolkit-column {
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        .toolkit-column h3 {
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #2563eb;
-            margin-bottom: 1.25rem;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 0.5rem;
-        }
-
-        .toolkit-column ul {
-            list-style: none;
-        }
-
-        .toolkit-column ul li {
-            font-size: 1rem;
-            color: #334155;
-            margin-bottom: 0.6rem;
-            font-weight: 500;
-        }
-
-        /* Project Grid Matrix cards */
-        .project-card {
-            background: #ffffff;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            padding: 2.5rem;
-            border-radius: 14px;
-            margin-bottom: 2.5rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .project-tech span {
-            font-size: 0.75rem;
-            font-weight: 700;
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 0.3rem 0.65rem;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
-
-        .project-card h3 {
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            color: #1e293b;
-        }
-
-        .project-meta {
-            font-size: 0.95rem;
-            color: #64748b;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
-        }
-
-        .project-card p {
-            font-size: 1.05rem;
-            color: #475569;
-            margin-bottom: 1rem;
-        }
-
-        /* Timeline Records Elements */
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 3rem;
-            margin-bottom: 3.5rem;
-        }
-
-        .timeline-date {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #64748b;
-        }
-
-        .timeline-content h3 {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: #1e293b;
-            margin-bottom: 0.25rem;
-        }
-
-        .timeline-company {
-            font-size: 1rem;
-            color: #2563eb;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-content p {
-            font-size: 1.05rem;
-            color: #475569;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 2.5rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .footer-links a {
-            text-decoration: none;
-            color: #0f172a;
-            font-weight: 700;
-            font-size: 1.1rem;
-            border-bottom: 2px solid #0f172a;
-            padding-bottom: 4px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shilpa Vellore Krishnamurthy — HRIS &amp; People Analytics</title>
+<meta name="description" content="Workday HCM &amp; People Analytics specialist — Berlin. SAP-to-Workday migration, Power BI dashboards, GDPR-compliant reporting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <strong>Shilpa VK</strong>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#toolkit">Toolkit</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+<canvas id="node-canvas"></canvas>
+
+<div class="grain"></div>
+
+<nav class="nav">
+  <a href="#top" class="nav__mark">SVK</a>
+  <div class="nav__links">
+    <a href="#about">About</a>
+    <a href="#systems">Systems</a>
+    <a href="#pipeline">Experience</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="assets/Shilpa_VK_CV.pdf" class="nav__cta" download>Résumé ↓</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero__inner">
+    <p class="eyebrow"><span class="eyebrow__dot"></span>Berlin, Germany · Settlement Permit · Available immediately</p>
+    <h1 class="hero__name">Shilpa Vellore<br>Krishnamurthy</h1>
+    <div class="hero__role">
+      <span class="hero__role-prefix">I build the systems behind</span>
+      <span class="hero__role-cycle" id="role-cycle" aria-live="polite"></span>
+    </div>
+    <p class="hero__summary">
+      Nine years turning messy HR data into governed, trustworthy systems —
+      Workday HCM configuration, SAP-to-Workday migrations, and the Power BI
+      dashboards that leadership actually reads.
+    </p>
+    <div class="hero__actions">
+      <a href="mailto:Shilpavk20@gmail.com" class="btn btn--primary">Say hello</a>
+      <a href="https://linkedin.com/in/shilpavmk" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn</a>
+      <a href="https://github.com/vkshilpa106-blip" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <span>scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section" id="about">
+    <div class="section__head">
+      <span class="section__tag">01 — About</span>
+      <h2>Data liaison, by trade.</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__photo">
+        <img src="assets/profile.jpg" alt="Portrait of Shilpa Vellore Krishnamurthy" loading="lazy">
+        <div class="about__photo-frame"></div>
+      </div>
+      <div class="about__copy">
+        <p>
+          I sit at the point where HR, IT, and leadership stop understanding
+          each other — and translate. At Expleo Germany I was the bridge
+          between a legacy SAP HCM estate and a new global Workday tenant:
+          mapping data structures, reconciling headcounts across
+          international hubs, and building the CHRO-level Power BI suite
+          that made workforce trends visible in real time.
+        </p>
+        <p>
+          Before that, at Infoplus, I built the company's first automated
+          diversity dashboard and the data-quality routines behind it — the
+          kind of unglamorous governance work that makes every report after
+          it trustworthy.
+        </p>
+        <p>
+          I'm currently deepening my analytics toolkit — Python, SQL,
+          Tableau, applied ML — through Ironhack's AI Data Analytics
+          Bootcamp in Berlin, while continuing to work hands-on in Workday
+          sandbox tenants.
+        </p>
+        <div class="about__facts">
+          <div class="fact">
+            <span class="fact__num">9</span>
+            <span class="fact__label">years in HR systems<br>&amp; analytics</span>
+          </div>
+          <div class="fact">
+            <span class="fact__num">2</span>
+            <span class="fact__label">Workday certifications<br>Core HCM · Payroll BP</span>
+          </div>
+          <div class="fact">
+            <span class="fact__num">25+</span>
+            <span class="fact__label">international hubs<br>supported at Expleo</span>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section class="hero" style="border:none;">
-            <div class="hero-tag">HRIS Specialist &amp; HR Data Analyst · Berlin</div>
-            <h1>Shilpa<br>Vellore Krishnamurthy</h1>
-            <p class="bio">
-                I spent years managing global HRIS structures, data mappings, and backend human capital technical migrations. Now, I fuse that deep domain expertise with advanced engineering toolkits to construct the reliable, automated analytics architecture enterprise teams actually need.
-            </p>
-            <div class="meta-tags">
-                <span>📍 Based in Berlin, Germany</span>
-                <span>🟢 Available Immediately</span>
-            </div>
-        </section>
+  <section class="section section--dark" id="systems">
+    <div class="section__head">
+      <span class="section__tag">02 — Systems</span>
+      <h2>What I actually configure.</h2>
+    </div>
+    <div class="systems__grid">
 
-        <!-- SCOREBOARD GRID MODULE -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h2>15+</h2>
-                <p>Years HR Infrastructure Experience</p>
-            </div>
-            <div class="stat-card">
-                <h2>5+</h2>
-                <p>Core HR Systems Managed</p>
-            </div>
-            <div class="stat-card">
-                <h2>3</h2>
-                <p>Languages Fluent / Certified</p>
-            </div>
+      <div class="systems__col">
+        <h3>Workday</h3>
+        <ul class="tag-list">
+          <li>Core HCM · Worker Lifecycle</li>
+          <li>Business Process Framework</li>
+          <li>Security Groups (Constrained / Domain / Role-based)</li>
+          <li>Staffing Models &amp; Eligibility Rules</li>
+          <li>Payroll Fundamentals · EIBs</li>
+          <li>Recruitment configuration</li>
+        </ul>
+      </div>
+
+      <div class="systems__col">
+        <h3>Migration &amp; Governance</h3>
+        <ul class="tag-list">
+          <li>SAP HCM (PA/OM) data mapping</li>
+          <li>Tenant validation &amp; reconciliation</li>
+          <li>GDPR-compliant reporting design</li>
+          <li>DEI metric standardization (DQAR)</li>
+          <li>Data quality assurance routines</li>
+          <li>UAT &amp; release testing</li>
+        </ul>
+      </div>
+
+      <div class="systems__col">
+        <h3>Analytics &amp; BI</h3>
+        <ul class="tag-list">
+          <li>Power BI — Star Schema, DAX, RLS</li>
+          <li>Power Query · SQL</li>
+          <li>Tableau</li>
+          <li>KPI design &amp; data storytelling</li>
+          <li>Excel — advanced modelling</li>
+          <li>Python &amp; ML fundamentals <em>(in progress)</em></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="pipeline">
+    <div class="section__head">
+      <span class="section__tag">03 — Experience</span>
+      <h2>The pipeline so far.</h2>
+      <p class="section__sub">Every role, run the way I'd document a data pipeline — source, transform, output.</p>
+    </div>
+
+    <div class="pipeline">
+      <div class="pipeline__line"><div class="pipeline__line-fill" id="pipeline-fill"></div></div>
+
+      <div class="node" data-metric="0" data-suffix="">
+        <div class="node__dot"></div>
+        <div class="node__card">
+          <span class="node__date">Aug 2025 — Aug 2026</span>
+          <h3>Ironhack · AI Data Analytics Bootcamp</h3>
+          <p class="node__role">Berlin — in progress, Bildungsgutschein-funded</p>
+          <p>Python, SQL, Tableau, applied ML, and LLM/API integration — extending a decade of BI work into full-stack data analytics.</p>
         </div>
+      </div>
 
-        <!-- BIOGRAPHY CONTENT MODULE -->
-        <section id="about">
-            <h2 class="section-title">About me</h2>
-            <div class="about-split">
-                <div class="about-quote">
-                    “I know how system logic configurations perform when backend master architectures are messy—because I've had to deploy them.”
-                </div>
-                <div class="about-text">
-                    <p>My professional journey is anchored inside global human capital ecosystems. I have driven data validation tracks migrating operational records from legacy configurations into secure modern infrastructures.</p>
-                    <p>Through managing localized corporate process engineering workflows at Expleo, I noticed a common operational gap: data pipelines existed, but standardized, self-service analytical dashboards did not.</p>
+      <div class="node" data-metric="10" data-suffix="%">
+        <div class="node__dot"></div>
+        <div class="node__card">
+          <span class="node__date">Jan 2022 — Aug 2025</span>
+          <h3>Expleo Germany GmbH</h3>
+          <p class="node__role">Berlin — Strategic Partner, Workday HRIS &amp; Data Analyst</p>
+          <p>Led the SAP-to-Workday global data migration and built the CHRO-level Power BI suite tracking headcount, attrition, and org metrics.</p>
+          <span class="node__impact"><span class="counter">10</span>% reduction in turnover, enabled by real-time workforce visibility</span>
+        </div>
+      </div>
+
+      <div class="node" data-metric="25" data-suffix="%">
+        <div class="node__dot"></div>
+        <div class="node__card">
+          <span class="node__date">Dec 2020 — Dec 2021</span>
+          <h3>Infoplus Technologies GmbH</h3>
+          <p class="node__role">Frankfurt — Working Student, HR Analytics</p>
+          <p>Built the company's first automated Diversity Dashboard from SAP HCM data, with GDPR-compliant handling as the Single Source of Truth for its first Sustainability Report.</p>
+          <span class="node__impact"><span class="counter">25</span>% fewer reporting errors via automated DQA routines</span>
+        </div>
+      </div>
+
+      <div class="node" data-metric="40" data-suffix="%">
+        <div class="node__dot"></div>
+        <div class="node__card">
+          <span class="node__date">Apr 2016 — Aug 2019</span>
+          <h3>Covenants Consultant Pvt Ltd</h3>
+          <p class="node__role">Chennai — People Analytics</p>
+          <p>Standardized multi-plant headcount consolidation across automotive manufacturing sites and isolated unauthorized overtime spend on the factory floor.</p>
+          <span class="node__impact"><span class="counter">40</span>% reduction in unnecessary overtime spend</span>
+        </div>
+      </div>
+
+      <div class="node" data-metric="20" data-suffix="%">
+        <div class="node__dot"></div>
+        <div class="node__card">
+          <span class="node__date">Jun 2010 — Mar 2016</span>
+          <h3>Links HR Services</h3>
+          <p class="node__role">Chennai — Recruiting Strategy Partner</p>
+          <p>Built Excel-based pipeline dashboards for IT recruiting — the analytical foundation everything since has been built on.</p>
+          <span class="node__impact"><span class="counter">20</span>% saved in annual sourcing costs</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section--dark" id="credentials">
+    <div class="section__head">
+      <span class="section__tag">04 — Credentials</span>
+      <h2>Certified &amp; still learning.</h2>
+    </div>
+    <div class="credentials__grid">
+      <div class="credential">
+        <span class="credential__mark">WD</span>
+        <h3>Workday HCM Core</h3>
+        <p>Certified</p>
+      </div>
+      <div class="credential">
+        <span class="credential__mark">WD</span>
+        <h3>Workday Payroll BP</h3>
+        <p>Certified</p>
+      </div>
+      <div class="credential">
+        <span class="credential__mark">MSc</span>
+        <h3>Leadership &amp; HR Management</h3>
+        <p>Gisma Business School / University of Law, Berlin</p>
+      </div>
+      <div class="credential">
+        <span class="credential__mark">AI</span>
+        <h3>Data Analytics Bootcamp</h3>
+        <p>Ironhack, Berlin — in progress</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="section__head">
+      <span class="section__tag">05 — Contact</span>
+      <h2>Let's talk Workday.</h2>
+    </div>
+    <div class="contact__grid">
+      <a href="mailto:Shilpavk20@gmail.com" class="contact__item">
+        <span class="contact__label">Email</span>
+        <span class="contact__value">Shilpavk20@gmail.com</span>
+      </a>
+      <a href="tel:+491741914918" class="contact__item">
+        <span class="contact__label">Phone</span>
+        <span class="contact__value">+49 174 1914918</span>
+      </a>
+      <a href="https://linkedin.com/in/shilpavmk" target="_blank" rel="noopener" class="contact__item">
+        <span class="contact__label">LinkedIn</span>
+        <span class="contact__value">/in/shilpavmk</span>
+      </a>
+      <a href="https://github.com/vkshilpa106-blip" target="_blank" rel="noopener" class="contact__item">
+        <span class="contact__label">GitHub</span>
+        <span class="contact__value">@vkshilpa106-blip</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Shilpa Vellore Krishnamurthy · Berlin, Germany</p>
+  <p>Built &amp; deployed on GitHub Pages</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
