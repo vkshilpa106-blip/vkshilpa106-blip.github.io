@@ -120,9 +120,16 @@ img{ max-width: 100%; display:block; }
 .eyebrow__rule{ width: 30px; height: 1px; background: var(--gold-dim); display:inline-block; }
 
 .hero__name{
-  font-size: clamp(44px, 6.2vw, 78px);
-  font-weight: 500; line-height: 1.03;
+  font-size: clamp(52px, 7.5vw, 96px);
+  font-weight: 500; line-height: 1;
   margin-bottom: 28px;
+  display:flex; flex-direction:column; gap: 10px;
+}
+.hero__family{
+  font-family: var(--mono);
+  font-size: clamp(13px, 1.3vw, 16px);
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ivory-soft); font-weight: 500;
 }
 
 .hero__summary{
@@ -227,30 +234,37 @@ main{ position:relative; background: var(--bg); }
 /* ============================================================
    ABOUT
    ============================================================ */
-.about__grid{ display:grid; grid-template-columns: 260px 1fr; gap: 60px; align-items:start; }
-@media (max-width: 800px){ .about__grid{ grid-template-columns: 1fr; } }
-
-.about__photo img{
-  width:100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 3px;
-  filter: grayscale(20%) contrast(1.03) sepia(6%);
-  border: 1px solid var(--line);
-}
-.about__copy p{ color: var(--ivory-soft); font-size: 16.5px; margin: 0 0 20px; max-width: 62ch; }
+.about__copy--wide{ max-width: 720px; }
+.about__copy p{ color: var(--ivory-soft); font-size: 17px; margin: 0 0 20px; max-width: 68ch; }
 
 /* ============================================================
    SYSTEMS — tag clouds
    ============================================================ */
-.tagcloud-group{ margin-bottom: 40px; }
-.tagcloud-group:last-child{ margin-bottom: 0; }
-.tagcloud-group h3{ font-size: 18px; color: var(--gold-hi); margin-bottom: 16px; font-weight: 500; }
+.skills-grid{
+  display:grid; grid-template-columns: repeat(2, 1fr); gap: 44px 60px;
+}
+@media (max-width: 860px){ .skills-grid{ grid-template-columns: 1fr; } }
+
+.tagcloud-group{ margin-bottom: 0; }
+.tagcloud-group h3{ font-size: 17px; color: var(--gold-hi); margin-bottom: 16px; font-weight: 500; }
 .tagcloud{ display:flex; flex-wrap:wrap; gap: 10px; }
 .tagcloud span{
-  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.02em;
-  padding: 8px 14px; border: 1px solid var(--line-strong); border-radius: 3px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.02em;
+  padding: 7px 13px; border: 1px solid var(--line-strong); border-radius: 3px;
   color: var(--ivory-soft); transition: border-color 0.2s, color 0.2s;
 }
 .tagcloud span:hover{ border-color: var(--gold-dim); color: var(--ivory); }
-.tagcloud__wip{ color: var(--teal) !important; border-color: rgba(76,154,133,0.35) !important; }
+.tagcloud--languages span em{
+  font-style: normal; color: var(--gold-hi); margin-left: 6px;
+}
+
+/* ============================================================
+   IMPRESSUM
+   ============================================================ */
+.impressum__body p{ color: var(--ivory-soft); font-size: 15.5px; margin: 0 0 14px; }
+.impressum__body strong{ color: var(--ivory); }
+.impressum__body a{ color: var(--gold-hi); }
+.impressum__note{ font-size: 13px; font-style: italic; color: var(--ivory-soft); opacity: 0.75; }
 
 /* ============================================================
    PROJECTS
@@ -275,64 +289,6 @@ main{ position:relative; background: var(--bg); }
 .project-card__pending{
   font-family: var(--mono); font-size: 12px; color: var(--ivory-soft); font-style: italic;
 }
-
-/* ============================================================
-   PIPELINE (experience)
-   ============================================================ */
-.pipeline{ position: relative; padding-left: 40px; margin-bottom: 70px; }
-
-.pipeline__line{
-  position:absolute; left: 8px; top: 8px; bottom: 8px; width: 2px;
-  background: var(--line); border-radius: 2px; overflow:hidden;
-}
-.pipeline__line-fill{
-  position:absolute; top:0; left:0; width:100%; height:0%;
-  background: linear-gradient(var(--gold-dim), var(--gold-hi));
-  transition: height 0.15s linear;
-}
-
-.node{ position:relative; padding-bottom: 52px; }
-.node:last-child{ padding-bottom: 0; }
-
-.node__dot{
-  position:absolute; left: -40px; top: 6px;
-  width: 18px; height:18px; border-radius:50%;
-  background: var(--bg-panel); border: 2px solid var(--line-strong);
-  transition: border-color 0.4s, background 0.4s;
-}
-.node.is-active .node__dot{ border-color: var(--gold); background: var(--gold); }
-
-.node__card{
-  background: var(--card); border: 1px solid var(--line); border-radius: 4px;
-  padding: 26px 30px; max-width: 660px;
-}
-.node__date{ font-family: var(--mono); font-size: 12px; color: var(--gold-hi); letter-spacing: 0.04em; }
-.node__card h3{ font-size: 20px; margin: 8px 0 4px; }
-.node__role{ font-size: 14px; color: var(--ivory-soft); margin: 0 0 14px; font-style: italic; }
-.node__card p{ margin: 0 0 12px; color: var(--ivory-soft); font-size: 15px; }
-.node__impact{
-  display:block; margin-top: 12px; padding-top: 14px; border-top: 1px dashed var(--line);
-  font-family: var(--mono); font-size: 13px; color: var(--teal);
-}
-.node__impact .counter{ font-size: 19px; font-weight:600; }
-
-/* --- credentials strip (inside experience section) --- */
-.credentials{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-@media (max-width: 900px){ .credentials{ grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 500px){ .credentials{ grid-template-columns: 1fr; } }
-
-.credential{
-  display:flex; gap: 14px; align-items:flex-start;
-  border: 1px solid var(--line); border-radius: 4px; padding: 20px;
-  transition: border-color 0.3s;
-}
-.credential:hover{ border-color: var(--gold-dim); }
-.credential__mark{
-  font-family: var(--mono); font-size: 11px; font-weight:600; color: var(--bg);
-  background: var(--gold); padding: 4px 8px; border-radius: 2px; flex-shrink:0;
-}
-.credential h4{ font-size: 14.5px; margin: 0 0 4px; font-weight:600; font-family: var(--body); }
-.credential p{ margin:0; font-size: 12.5px; color: var(--ivory-soft); }
 
 /* ============================================================
    CONTACT
