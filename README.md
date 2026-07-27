@@ -6,8 +6,8 @@ HTML, CSS, and vanilla JS.
 ## What's inside
 - `index.html` — page structure and content
 - `style.css` — the design system (colors, type, layout, animation)
-- `script.js` — scroll reveals and the nav shadow-on-scroll effect
-- `assets/Shilpa_VK_CV.pdf` — downloadable résumé (linked from the nav, contact, and hero)
+- `script.js` — the hero role-cycle, scroll reveals, and nav shadow
+- `assets/Shilpa_VK_CV.pdf` — downloadable résumé (linked from the nav and contact)
 
 ## Publish it on your existing `github.io` repo
 
@@ -21,12 +21,12 @@ HTML, CSS, and vanilla JS.
 ## Making changes later
 - **Update your résumé**: replace `assets/Shilpa_VK_CV.pdf` with a new
   export, same filename.
+- **Edit the cycling role line**: the phrases live in the `roles` array
+  near the top of `script.js`.
 - **Add a project**: copy one `.project-card` block in the "Projects"
   section of `index.html`, update the tags/text, and replace the
-  `project-card__pending` line with real links, e.g.
-  `<a href="https://github.com/...">View on GitHub →</a>`.
+  `project-card__pending` line with real links.
 - **Add the Impressum address**: edit the `#impressum` section in
   `index.html` if you decide to publish a postal address later.
 - **Adjust skills**: each skill category lives in its own
-  `.tagcloud-group` block in the "Systems" section — add or remove
-  `<span>` tags freely.
+  `.tagcloud-group` block in the "Systems" section.

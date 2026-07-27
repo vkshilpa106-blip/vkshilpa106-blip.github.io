@@ -1,6 +1,45 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ============================================================
+   Role cycle — static fallback text already in HTML;
+   this only enhances it. If it fails, the first phrase stays visible.
+   ============================================================ */
+try{
+  const el = document.getElementById('role-cycle');
+  if(el && !prefersReducedMotion){
+    const roles = [
+      'Workday HCM & Recruitment — Functional Consultant',
+      'CHRO-level Power BI Dashboards',
+      'Recruitment Intelligence Dashboard — 25+ hubs',
+      'SAP → Workday Data Migration'
+    ];
+    let roleIndex = 0, charIndex = roles[0].length, deleting = false;
+
+    function tick(){
+      const current = roles[roleIndex];
+      if(!deleting){
+        charIndex++;
+        el.textContent = current.slice(0, charIndex);
+        if(charIndex >= current.length){
+          deleting = true;
+          setTimeout(tick, 1900);
+          return;
+        }
+      } else {
+        charIndex--;
+        el.textContent = current.slice(0, charIndex);
+        if(charIndex <= 0){
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+      }
+      setTimeout(tick, deleting ? 28 : 45);
+    }
+    setTimeout(tick, 2200); // pause on the static first phrase before cycling starts
+  }
+}catch(e){ console.error('role cycle failed', e); }
+
+/* ============================================================
    Scroll reveals
    ============================================================ */
 try{

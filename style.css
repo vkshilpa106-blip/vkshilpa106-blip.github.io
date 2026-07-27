@@ -132,6 +132,25 @@ img{ max-width: 100%; display:block; }
   color: var(--ivory-soft); font-weight: 500;
 }
 
+.hero__role{
+  display:flex; flex-wrap:wrap; align-items:baseline; gap: 10px;
+  font-family: var(--mono); font-size: clamp(13.5px, 1.4vw, 15.5px);
+  margin: 0 0 22px;
+}
+.hero__role-label{ color: var(--ivory-soft); letter-spacing: 0.03em; }
+.hero__role-cycle{
+  color: var(--gold-hi); font-weight: 500;
+  border-bottom: 1px solid var(--gold-dim); padding-bottom: 2px;
+}
+.hero__role-cycle::after{
+  content:""; display:inline-block; width: 2px; height: 1em; margin-left: 3px;
+  background: var(--gold-hi); vertical-align: -2px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink{ 50%{ opacity:0; } }
+
+.stat__num--lang{ font-size: 26px; letter-spacing: 0.02em; }
+
 .hero__summary{
   font-size: clamp(16.5px, 1.5vw, 19px);
   max-width: 540px;
@@ -169,14 +188,6 @@ img{ max-width: 100%; display:block; }
 .ring--outer{ fill:none; stroke: var(--line-strong); stroke-width: 1; }
 .ring--dashed{ fill:none; stroke: var(--gold-dim); stroke-width: 1; stroke-dasharray: 3 7; transform-origin: 160px 160px; animation: spin 60s linear infinite; }
 @keyframes spin{ to{ transform: rotate(360deg); } }
-
-.hero__hub{ position:absolute; inset:0; width:100%; height:100%; }
-.hub__spoke{ stroke: var(--line-strong); stroke-width: 1; }
-.hub__node{ fill: var(--gold); }
-.hub__label{
-  font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em;
-  fill: var(--ivory-soft); text-anchor: middle;
-}
 
 .hero__stats{
   position:relative; z-index:2;
