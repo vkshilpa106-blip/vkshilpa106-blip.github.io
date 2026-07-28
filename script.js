@@ -40,6 +40,61 @@ try{
 }catch(e){ console.error('role cycle failed', e); }
 
 /* ============================================================
+   Live console panel — retypes its lines on a loop for a
+   "live status feed" feel. Static content is already in the
+   HTML, so if this fails, all four lines just sit there fully
+   readable rather than disappearing.
+   ============================================================ */
+try{
+  const body = document.getElementById('console-body');
+  if(body && !prefersReducedMotion){
+    const lines = Array.from(body.querySelectorAll('p')).map(p => ({
+      key: p.querySelector('.console__key').textContent,
+      val: p.querySelector('.console__val').textContent
+    }));
+
+    function typeLoop(){
+      body.innerHTML = '';
+      let i = 0;
+
+      function nextLine(){
+        if(i >= lines.length){
+          setTimeout(typeLoop, 3200); // hold full panel, then restart
+          return;
+        }
+        const p = document.createElement('p');
+        p.classList.add('is-typing');
+        const keySpan = document.createElement('span');
+        keySpan.className = 'console__key';
+        const valSpan = document.createElement('span');
+        valSpan.className = 'console__val';
+        p.appendChild(keySpan);
+        p.appendChild(valSpan);
+        body.appendChild(p);
+        keySpan.textContent = lines[i].key;
+
+        let c = 0;
+        const val = lines[i].val;
+        const typeChar = () => {
+          c++;
+          valSpan.textContent = val.slice(0, c);
+          if(c < val.length){
+            setTimeout(typeChar, 22);
+          } else {
+            p.classList.remove('is-typing');
+            i++;
+            setTimeout(nextLine, 260);
+          }
+        };
+        setTimeout(typeChar, 120);
+      }
+      nextLine();
+    }
+    setTimeout(typeLoop, 2600); // let the static version sit first
+  }
+}catch(e){ console.error('console panel failed', e); }
+
+/* ============================================================
    Scroll reveals
    ============================================================ */
 try{
