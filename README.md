@@ -5,17 +5,15 @@ Personal portfolio for **Shilpa Vellore Krishnamurthy** — HR Data Intelligence
 ## Folder structure
 
 ```
-portfolio/
-├── index.html          → all page content & structure
-├── css/
-│   └── style.css       → design tokens, layout, animations
-├── js/
-│   ├── main.js          → AOS, Typed.js, counters, timeline, nav
-│   └── particles-config.js → AI network background
-├── assets/
-│   └── images/          → put any images/photos here
+your-repo/
+├── index.html            → all page content & structure
+├── style.css             → design tokens, layout, animations
+├── main.js               → AOS, Typed.js, counters, timeline, nav
+├── particles-config.js   → AI network background
 └── README.md
 ```
+
+All files sit flat at the repo root — this matches how GitHub's drag-and-drop upload handles files, so `index.html` can find `style.css`/`main.js`/`particles-config.js` with a simple relative path (no subfolders needed).
 
 Libraries (loaded via CDN, no build step required): AOS, Typed.js, tsParticles, Font Awesome, Google Fonts (Space Grotesk / Inter / JetBrains Mono).
 
