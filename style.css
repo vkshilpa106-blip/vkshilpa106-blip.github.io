@@ -677,6 +677,22 @@ img { max-width: 100%; display: block; }
 }
 .stack-category li:hover { color: var(--text); border-color: var(--primary); }
 
+.stack-subgroup { margin-bottom: 16px; }
+.stack-subgroup:last-child { margin-bottom: 0; }
+.stack-subgroup-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  opacity: 0.75;
+  margin-bottom: 8px;
+}
+.stack-category li a { color: inherit; text-decoration: none; }
+.stack-category li:hover a { color: inherit; }
+
 /* =========================================================
    APPROACH / PROBLEM SOLVING
 ========================================================= */
